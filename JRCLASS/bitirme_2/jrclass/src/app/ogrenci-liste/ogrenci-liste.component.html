@@ -1,0 +1,42 @@
+
+<body>
+  <div class="container">
+  </div>
+  <main class="container">
+    <div class=" p-md-5 mb-4  rounded text-bg-dark">
+      <div class="col-md-6 px-0">
+        <div class="mb-4 col-md-12">
+          <label for="exampleFormControlInput1" class="form-label">Öğrencinin Kodu</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1">
+        </div>
+        <div class="mb-4">
+          <label for="exampleFormControlTextarea1" class="form-label">Yorum</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div>
+          <button type="button" class="btn btn-success">Paylaş</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div  *ngFor="let b of ogrenci" class="row mb-2">
+      <div *ngFor="let a of comment"  class="col-md-12">        
+        <div 
+          class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-secondary text-white">
+          <div class="col p-4 d-flex flex-column position-static">
+            <h3 class="mb-0">{{b.studentName+"  "+b.studentSurname+"  "+b.studentCode}}</h3>
+            <p class="card-text mb-auto">{{a.comment}}</p>
+          </div>
+        </div>
+      </div>
+      <!-- <div *ngFor="let a of comment" class="col-md-6">
+        <div 
+          class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-secondary text-white">
+          <div class="col p-4 d-flex flex-column position-static">
+            <h3 class="mb-0">{{a.comment}}</h3>
+            <p class="mb-auto"></p>
+          </div>
+        </div>
+      </div> -->
+    </div>

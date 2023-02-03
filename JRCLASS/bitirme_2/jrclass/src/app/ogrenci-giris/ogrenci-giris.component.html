@@ -1,0 +1,45 @@
+
+<!-- Jumbotron -->
+<div class="container py-5">
+    <div class="row g-2 align-items-center">
+        <div>
+            <div class="card cascading-right" style="
+              background: hsla(263, 42%, 28%, 0.55);
+              backdrop-filter: blur(30px); text-align: center;
+              ">
+                <div class="card-body p-4 shadow-4 text-center">
+                    <h2 class="fw-bold mb-4">Ögrenci Giriş</h2>
+
+                    
+                    <form #OgrenciAddFrom="ngForm" (ngSubmit)="onSubmit(OgrenciAddFrom)">
+                     
+                        <div class="row">
+                            <div class="col-md-8 mb-8">
+                            </div>
+                        </div>
+                       
+                        <div class="form-outline mb-4">
+                            <input  id="form3Example3" class="form-control"  #name="ngModel"[(ngModel)]="ogrenci.studentName"name="studentName" />
+                            <label class="form-label" for="form3Example3">Adınız</label>
+                        </div>
+                      
+                        <div class="form-outline mb-4">
+                            <input id="form3Example4" class="form-control"  #name="ngModel"[(ngModel)]="ogrenci.studentCode"name="studentCode" />
+                            <label class="form-label" for="form3Example4">Öğrenci Kodunuz</label>
+                        </div>
+                        
+                        <button   class="btn btn-primary btn-block mb-4">
+                            Giriş Yap
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <img src="https://egitimplanlamamerkezi.com/wp-content/uploads/2021/11/velilere-tavsiyeler.jpg"
+                class="w-100 rounded-4 shadow-10" alt="" />
+        </div>
+    </div>
+</div>
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
